@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Home from './Home';
+import Home from './Home/Home';
 import { useEffect } from 'react'
 import { themeChange } from 'theme-change'
 
@@ -17,18 +17,21 @@ const Navbar = ({ children }) => {
             <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col">
 
-                <div class="w-full navbar bg-base-100 px-20">
+                <div class="w-full navbar bg-base-100 lg:px-20 fixed top-0 z-50">
 
                     <div class="flex-1 px-2 mx-2 text-2xl">Clean Co</div>
-                    <div class="flex-none hidden lg:block">
-                        <ul class="menu menu-horizontal gap-x3">
 
+                    <div class="flex-none hidden lg:block">
+                        <ul class="menu menu-horizontal gap-x-2">
+
+                            <li><NavLink className='rounded-lg' to='/' >Home</NavLink ></li>
                             <li><NavLink className='rounded-lg' to='/about' >About</NavLink ></li>
                             <li><NavLink className='rounded-lg' to='/contuct' >Countact</NavLink ></li>
                             <li><NavLink className='rounded-lg' to='/service' >Service</NavLink ></li>
                             <li><NavLink className='rounded-lg' to='/login' >Login</NavLink ></li>
-                            <li>
 
+
+                            <li>
                                 <label class='swap swap-rotate'>
                                     <input type='checkbox' data-toggle-theme='dark,light' />
 

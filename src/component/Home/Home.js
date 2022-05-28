@@ -1,9 +1,11 @@
 import React from 'react';
+import Landing from './Landing';
 
 const Home = () => {
     return (
         <div>
-            <h2 className='text-primary'>This  is Home</h2>
+
+            <Landing />
         </div>
     );
 };
